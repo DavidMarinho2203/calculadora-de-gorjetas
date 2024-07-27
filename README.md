@@ -28,7 +28,7 @@ Este pequeno aplicativo é perfeito para qualquer um que esteja começando a ent
    **cd "caminho do local da pasta"**
 
 1. Clone o repositório:
-   git clone https://github.com/DavidMarinho2203/calculadora-de-idade
+   git clone https://github.com/DavidMarinho2203/calculadora-de-gorjetas
 
 2. Abra o arquivo `index.html` no seu navegador ou utilize uma extensão do VS Code como "Live Server" para ver o projeto em execução.
 
