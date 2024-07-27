@@ -1,0 +1,92 @@
+// Main
+main {
+    background-color: $neutra-acinzentado-claro-cor;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 50px 0;
+
+    img {
+        width: 100px;
+    }
+
+    #container__principal {
+        // Container Principal
+        width: 300px;
+        padding: 20px;
+        background-color: $branco-cor;
+        border-radius: 30px;
+        display: grid;
+        grid-template-areas: "area1" "area2";
+        gap: 20px;
+
+        
+        // Form
+        @import "./area01/form.scss";
+
+        // Area 2
+        @import "./area02/mostrarResultado";
+        
+
+    }
+
+}
+
+@media (width >=768px) {
+    // Responsividade para telas maiores que 670px
+
+    main {
+        height: fit-content;
+
+        #container__principal {
+            // Container Principal
+            width: 760px;
+            height: fit-content;
+            grid-template-areas: "area1 area2";
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 20px;
+
+            form {
+                width: fit-content;
+
+                #container__InputPorcentagem {
+
+                    // Container Input Porcentagem
+                    div {
+                        display: grid;
+                        grid-template-areas: "area1 area2 area3" "area4 area5 area6";
+                        grid-template-columns: 1fr 1fr 1fr;
+                        grid-template-rows: 1fr 1fr ;
+                        gap: 20px;
+                    }
+                }
+            }
+
+            #container__MostrarInformacoes {
+
+                // Container Mostrar Informações
+                #container__Resultados {
+
+
+
+                    // Container Resultados
+                    div {
+                        .label__nome {
+                            font-size: 1em;
+                        }
+
+                        .local__Resultado {
+                            font-size: 2em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+}

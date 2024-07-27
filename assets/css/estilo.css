@@ -1,0 +1,294 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+body main {
+  background-color: hsl(185, 41%, 84%);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  padding: 50px 0;
+}
+body main img {
+  width: 100px;
+}
+body main #container__principal {
+  width: 300px;
+  padding: 20px;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 30px;
+  display: grid;
+  grid-template-areas: "area1" "area2";
+  gap: 20px;
+}
+body main #container__principal form {
+  width: 100%;
+  grid-area: area1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: fit-content;
+}
+body main #container__principal form .input-Number {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
+body main #container__principal form .input-Number div {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+body main #container__principal form .input-Number div label {
+  color: hsl(186, 14%, 43%);
+  font-weight: 700;
+  font-size: 0.8em;
+  font-family: "Space Mono", monospace;
+}
+body main #container__principal form .input-Number div .error {
+  display: none;
+  font-family: "Space Mono", monospace;
+  font-size: 0.7em;
+  font-weight: 700;
+  color: red;
+}
+body main #container__principal form .input-Number label {
+  color: hsl(186, 14%, 43%);
+  font-weight: 700;
+  font-size: 0.8em;
+  font-family: "Space Mono", monospace;
+}
+body main #container__principal form .input-Number .icone__flutuante {
+  position: absolute;
+  width: 15px;
+  bottom: 13px;
+  left: 10px;
+  font-size: 2em;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  color: hsl(184, 14%, 56%);
+  cursor: pointer;
+}
+body main #container__principal form .input-Number input {
+  width: 100%;
+  background-color: hsl(189, 41%, 97%);
+  border: 2px solid transparent;
+  border-radius: 5px;
+  text-align: end;
+  font-size: 1.4em;
+  padding: 5px 0;
+  font-weight: 700;
+  color: hsl(183, 100%, 15%);
+  font-family: "Space Mono", monospace;
+  outline: none;
+  caret-color: hsl(172, 67%, 45%);
+}
+body main #container__principal form .input-Number input:focus-within {
+  border-color: hsl(172, 67%, 45%);
+  cursor: pointer;
+}
+body main #container__principal form #container__InputPorcentagem {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+body main #container__principal form #container__InputPorcentagem label {
+  color: hsl(186, 14%, 43%);
+  font-weight: 700;
+  font-size: 0.8em;
+  font-family: "Space Mono", monospace;
+}
+body main #container__principal form #container__InputPorcentagem div {
+  display: grid;
+  grid-template-areas: "area1 area2" "area3 area4" "area5 area6";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 20px;
+}
+body main #container__principal form #container__InputPorcentagem div .button {
+  background-color: hsl(183, 100%, 15%);
+  color: hsl(0, 0%, 100%);
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  display: flex;
+  padding: 5px;
+  font-size: 1.4em;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+body main #container__principal form #container__InputPorcentagem div .button:hover {
+  background-color: hsla(172, 67%, 45%, 0.5);
+  color: hsl(183, 100%, 15%);
+}
+body main #container__principal form #container__InputPorcentagem div .ativo {
+  color: hsl(183, 100%, 15%);
+  background-color: hsl(172, 67%, 45%);
+}
+body main #container__principal form #container__InputPorcentagem div .button:nth-child(1) {
+  grid-area: area1;
+}
+body main #container__principal form #container__InputPorcentagem div .button:nth-child(2) {
+  grid-area: area2;
+}
+body main #container__principal form #container__InputPorcentagem div .button:nth-child(3) {
+  grid-area: area3;
+}
+body main #container__principal form #container__InputPorcentagem div .button:nth-child(4) {
+  grid-area: area4;
+}
+body main #container__principal form #container__InputPorcentagem div .button:nth-child(5) {
+  grid-area: area5;
+}
+body main #container__principal form #container__InputPorcentagem div input {
+  /* Remover borda e background padrão */
+  border: none;
+  background-color: transparent;
+}
+body main #container__principal form #container__InputPorcentagem div input:nth-child(6) {
+  grid-area: area6;
+  width: 100%;
+  height: 100%;
+  background-color: hsl(189, 41%, 97%);
+  border: 2px solid transparent;
+  color: hsl(183, 100%, 15%);
+  text-align: end;
+  padding: 5px;
+  font-size: 1.4em;
+  font-weight: 700;
+  font-family: "Space Mono", monospace;
+  outline: none;
+  caret-color: hsl(172, 67%, 45%);
+  border-radius: 5px;
+}
+body main #container__principal form #container__InputPorcentagem div input:nth-child(6):focus-within {
+  border-color: hsl(172, 67%, 45%);
+  cursor: pointer;
+}
+body main #container__principal #container__MostrarInformacoes {
+  grid-area: area2;
+  background-color: hsl(183, 100%, 15%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 15px;
+  border-radius: 10px;
+}
+body main #container__principal #container__MostrarInformacoes #container__Resultados {
+  display: flex;
+  flex-direction: column;
+  padding: 5px 0px;
+  gap: 30px;
+}
+body main #container__principal #container__MostrarInformacoes #container__Resultados div {
+  display: flex;
+  justify-content: space-between;
+}
+body main #container__principal #container__MostrarInformacoes #container__Resultados div .label__nome {
+  display: diflex;
+  flex-direction: column;
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+  font-size: 0.9em;
+  font-family: "Space Mono", monospace;
+}
+body main #container__principal #container__MostrarInformacoes #container__Resultados div .label__nome strong {
+  display: block;
+  color: hsl(172, 67%, 45%);
+}
+body main #container__principal #container__MostrarInformacoes #container__Resultados div .local__Resultado {
+  font-size: 1.6em;
+  color: hsl(172, 67%, 45%);
+  font-weight: 700;
+  font-family: "Space Mono", monospace;
+  padding: 2px 0;
+}
+body main #container__principal #container__MostrarInformacoes button {
+  padding: 10px 20px;
+  background-color: hsla(172, 67%, 45%, 0.8);
+  color: hsl(183, 100%, 15%) 50%;
+  font-weight: 700;
+  font-family: "Space Mono", monospace;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+body main #container__principal #container__MostrarInformacoes button:hover {
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(0, 0%, 100%);
+}
+@media (width >= 768px) {
+  body main {
+    height: fit-content;
+  }
+  body main #container__principal {
+    width: 760px;
+    height: fit-content;
+    grid-template-areas: "area1 area2";
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 20px;
+  }
+  body main #container__principal form {
+    width: fit-content;
+  }
+  body main #container__principal form #container__InputPorcentagem div {
+    display: grid;
+    grid-template-areas: "area1 area2 area3" "area4 area5 area6";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+  }
+  body main #container__principal #container__MostrarInformacoes #container__Resultados div .label__nome {
+    font-size: 1em;
+  }
+  body main #container__principal #container__MostrarInformacoes #container__Resultados div .local__Resultado {
+    font-size: 2em;
+  }
+}
+body footer {
+  width: 100%;
+  padding: 1em 20px;
+  background-color: hsl(183, 100%, 15%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+body footer p {
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+  font-family: "Space Mono", monospace;
+  font-size: 0.7em;
+}
+body footer p strong {
+  color: hsl(172, 67%, 45%);
+}
+@media (width > 670px) {
+  body footer {
+    padding: 1em 0;
+  }
+  body footer p {
+    font-size: 0.9em;
+  }
+}
+
+/*# sourceMappingURL=estilo.css.map */

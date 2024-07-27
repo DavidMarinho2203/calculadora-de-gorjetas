@@ -1,0 +1,180 @@
+form {
+    // Formulário
+    width: 100%;
+    grid-area: area1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: fit-content;
+
+    .input-Number { // Input Número valor e pessoas
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        position: relative;
+
+        div {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+
+            label {
+                color: $neutra-acinzentado-escuro-cor;
+                font-weight: $weight-700;
+                font-size: 0.8em;
+                font-family: $font-family;
+            }
+
+            .error {
+                display: none;
+                font-family: $font-family;
+                font-size: 0.7em;
+                font-weight: $weight-700;
+                color: red;
+            }
+
+
+        }
+
+        label {
+            color: $neutra-acinzentado-escuro-cor;
+            font-weight: $weight-700;
+            font-size: 0.8em;
+            font-family: $font-family;
+        }
+
+        .icone__flutuante{
+            position: absolute;
+            width: 15px;
+            bottom: 13px;
+            left: 10px;
+            font-size: 2em;
+            font-family: $font-family;
+            font-weight: $weight-700;
+            color: $neutra-acinzentado-cor;
+            cursor: pointer;
+        }
+
+        input {
+            width: 100%;
+            background-color: $neutra-acinzentado-muito-claro-cor;
+            border: 2px solid transparent;
+            border-radius: 5px;
+            text-align: end;
+            font-size: 1.4em;
+            padding: 5px 0;
+            font-weight: $weight-700;
+            color: $neutra-ciano-escuro-cor;
+            font-family: $font-family;
+            outline: none;
+            caret-color: $primaria-ciano-forte-cor; // Cor do cursor
+
+            &:focus-within {
+                border-color: $primaria-ciano-forte-cor;
+                cursor: pointer;
+            }
+        }
+
+
+    }
+
+    #container__InputPorcentagem {
+        // Input Porcentagem
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        label {
+            color: $neutra-acinzentado-escuro-cor;
+            font-weight: $weight-700;
+            font-size: 0.8em;
+            font-family: $font-family;
+        }
+
+        div {
+            display: grid;
+            grid-template-areas: "area1 area2" "area3 area4" "area5 area6";
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            gap: 20px;
+
+
+            .button {
+                background-color: $neutra-ciano-escuro-cor;
+                color: $branco-cor;
+                font-family: $font-family;
+                font-weight: $weight-700;
+                display: flex;
+                padding: 5px;
+                font-size: 1.4em;
+                justify-content: center;
+                align-items: center;
+                border-radius: 5px;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: hsl(172, 67%, 45%, 50%);
+                    color: $neutra-ciano-escuro-cor;
+                }
+
+            }
+
+            .ativo {
+                color: $neutra-ciano-escuro-cor;
+                background-color: hsl(172, 67%, 45%, 100%);
+            }
+
+            .button:nth-child(1) {
+                grid-area: area1;
+            }
+
+            .button:nth-child(2) {
+                grid-area: area2;
+            }
+
+            .button:nth-child(3) {
+                grid-area: area3;
+            }
+
+            .button:nth-child(4) {
+                grid-area: area4;
+            }
+
+            .button:nth-child(5) {
+                grid-area: area5;
+            }
+
+            input {
+                /* Remover borda e background padrão */
+                border: none;
+                background-color: transparent;
+            }
+
+            input:nth-child(6) {
+                grid-area: area6;
+                width: 100%;
+                height: 100%;
+                background-color: $neutra-acinzentado-muito-claro-cor;
+                border: 2px solid transparent;
+                color: $neutra-ciano-escuro-cor;
+                text-align: end;
+
+                padding: 5px;
+                font-size: 1.4em;
+                font-weight: $weight-700;
+                font-family: $font-family;
+                outline: none; // Remover borda quando o cursor estiver sobre o input
+                caret-color: $primaria-ciano-forte-cor;
+
+                border-radius: 5px;
+
+                &:focus-within {
+                    border-color: $primaria-ciano-forte-cor;
+                    cursor: pointer;
+                }
+            }
+        }
+
+    }
+
+}
