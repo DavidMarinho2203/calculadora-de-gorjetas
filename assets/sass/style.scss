@@ -1,0 +1,22 @@
+// Importando as cores e fonts
+@import './cores/cores.scss';
+@import './fonts/fonts.scss';
+
+*{ // Reset CSS
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{ // Body
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+
+    // Importando o main
+    @import './main/main.scss';
+
+    // Importando o footer
+    @import './footer/footer.scss';
+}

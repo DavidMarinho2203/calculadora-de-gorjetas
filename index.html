@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+  <link rel="stylesheet" href="./assets/css/estilo.css">
+  <script src="./assets/js/script.js" defer></script>
+  <title>Frontend Mentor | Calculadora de gorjetas</title>
+</head>
+
+<body>
+  <main>
+    <img src="./assets/img/logo.svg" alt="imagem da logo">
+    <section id="container__principal">
+      <form>
+        <div id="container__InputValor" class="input-Number">
+          <label for="inValor">Conta</label>
+          <img class="icone__flutuante" src="./assets/img/icon-dollar.svg" alt="imagem do dollar">
+          <input type="number" name="inValor" id="inValor" placeholder="0">
+        </div>
+        <div id="container__InputPorcentagem">
+          <label>Selecionar dica %</label>
+          <div>
+            <div class="button" value="5">5%</div>
+            <div class="button" value="10">10%</div>
+            <div class="button" value="15">15%</div>
+            <div class="button" value="25">25%</div>
+            <div class="button" value="50">50%</div>
+            <input type="number" id="inPersonalizado" placeholder="Custom"></input>
+          </div>
+        </div>
+        <div id="container__QntPessoas" class="input-Number">
+          <div>
+            <div>
+              <label for="inQntPessoas">Número de pessoas</label>
+              <p class="error">Valor Inválido</p>
+            </div>
+          </div>
+          <img class="icone__flutuante" src="./assets/img/icon-person.svg" alt="imagem da pessoa">
+          <input type="number" name="inQntPessoas" id="inQntPessoas" placeholder="0">
+        </div>
+      </form>
+      <section id="container__MostrarInformacoes">
+        <div id="container__Resultados">
+          <div>
+            <p class="label__nome">Gorjeta <strong>/ pessoa</strong></p>
+            <p class="local__Resultado">$0.00</p>
+          </div>
+          <div>
+            <p class="label__nome">Total <strong>/ pessoa</strong></p>
+            <p class="local__Resultado">$0.00</p>
+          </div>
+        </div>
+        <button type="reset" disabled>Reset</button>
+      </section>
+    </section>
+  </main>
+  <footer>
+    <p>Todos os direitos reservados para o desenvolvedor <strong>David Beckham</strong></p>
+  </footer>
+</body>
+
+</html>

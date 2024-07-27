@@ -1,0 +1,29 @@
+footer { // Rodape
+    width: 100%;
+    padding: 1em 20px;
+    background-color: $neutra-ciano-escuro-cor;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    p {
+        color: $branco-cor;
+        font-weight: $weight-700;
+        font-family: $font-family;
+        font-size: .7em;
+        strong{
+            color: $primaria-ciano-forte-cor;
+        }
+    }
+}
+
+@media (width > 670px) { // Responsividade para telas maiores que 670px
+    footer {
+        padding: 1em 0;
+
+        p {
+            font-size: 0.9em;
+        }
+    }
+}
